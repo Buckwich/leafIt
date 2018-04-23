@@ -5,13 +5,33 @@
 .oswald {
   font-family: 'Oswald', sans-serif; }
 
+h1, h2, h3, h4 {
+  font-family: 'Oswald', sans-serif;
+  margin: 0; }
+
+p {
+  margin: 0; }
+
+section {
+  padding: 10px; }
+
 body {
-  background-color: #0086D1;
+  background-color: #D1C037;
   padding: 0;
   margin: 0;
   font-family: 'Roboto', sans-serif; }
 
 nav {
+  background-color: #0086D1;
+  padding: 10px; }
+
+#intro {
+  background-color: #35DBB4; }
+
+#howTo {
   background-color: #00C41A; }
+
+#predefined {
+  background-color: #98DB31; }
 
 /*# sourceMappingURL=index.css.map */
