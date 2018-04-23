@@ -1,0 +1,40 @@
+{
+  "name": "leafit",
+  "version": "1.0.0",
+  "description": "Allows generation of Leafs for different Microcontrollers or Chips. Most popular example would be the Raspberry Pi",
+  "scripts": {
+    "prestart": "npm run build",
+    "start": "node server.js",
+    "dev": "npm-run-all --parallel watch server",
+    "live": "npm-run-all --parallel server:live watch",
+    "server": "http-server -p 8080 ./dist",
+    "server:live": "live-server ./dist --no-browser --browser=google-chrome ",
+    "watch": "concurrently --names html,js,scss --prefix-colors blue,yellow,magenta \"npm run watch:html\" \"npm run watch:js\" \"npm run watch:scss\"",
+    "watch:html": "watch \"npm run build:html\" html",
+    "watch:js": "watchify js/main.js -o dist/index.js -d",
+    "watch:scss": "node-sass --watch --source-map true --source-map-contents ./css/main.scss ./dist/index.css",
+    "build": "npm-run-all build:*",
+    "build:html": "html-partials-compiler ./html/index.html > ./dist/index.html",
+    "build:js": "browserify -t uglifyify js/main.js | uglifyjs -c > dist/index.js",
+    "build:scss": "node-sass --output-style compressed css/main.scss > dist/index.css "
+  },
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^15.2.0",
+    "concurrently": "^3.5.1",
+    "express": "^4.16.3",
+    "html-minifier": "^3.5.8",
+    "html-partials-compiler": "^1.0.7",
+    "http-server": "^0.10.0",
+    "live-server": "^1.2.0",
+    "morgan": "^1.9.0",
+    "mustache": "^2.3.0",
+    "node-sass": "^4.7.2",
+    "npm-run-all": "^4.1.2",
+    "sass-watch": "^0.1.0",
+    "uglifyify": "^4.0.5",
+    "uglifyjs": "^2.4.11",
+    "watch": "^1.0.2",
+    "watchify": "^3.9.0"
+  }
+}
