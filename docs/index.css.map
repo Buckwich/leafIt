@@ -1,0 +1,20 @@
+{
+	"version": 3,
+	"file": "index.css",
+	"sources": [
+		"../css/main.scss",
+		"../css/variables.scss",
+		"../css/shared.scss",
+		"../css/index.scss",
+		"../css/navbar.scss"
+	],
+	"sourcesContent": [
+		"@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto');\n@import \"variables.scss\";\n@import \"shared.scss\";\n\n@import \"index.scss\";\n@import \"navbar.scss\";",
+		"$orange:#D1C037;\n$yellow: #98DB31;\n$green: #00C41A;\n$cyan: #35DBB4;\n$blue: #0086D1;",
+		".roboto{\n    font-family: 'Roboto', sans-serif;\n}\n.oswald{\n    font-family: 'Oswald', sans-serif;\n} \n",
+		"body{\n    background-color: $blue; \n    padding:0;\n    margin:0;\n    font-family: 'Roboto', sans-serif;\n    // font-family: 'Oswald', sans-serif;\n} ",
+		"nav{\n    background-color: $green;\n}"
+	],
+	"names": [],
+	"mappings": "AAAA,OAAO,CAAC,4DAAI;AEAZ,AAAA,OAAO,CAAA;EACH,WAAW,EAAE,oBAAoB,GACpC;;AACD,AAAA,OAAO,CAAA;EACH,WAAW,EAAE,oBAAoB,GACpC;;ACLD,AAAA,IAAI,CAAA;EACA,gBAAgB,EFGb,OAAO;EEFV,OAAO,EAAC,CAAC;EACT,MAAM,EAAC,CAAC;EACR,WAAW,EAAE,oBAAoB,GAEpC;;ACND,AAAA,GAAG,CAAA;EACC,gBAAgB,EHCZ,OAAO,GGAd"
+}
