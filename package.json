@@ -7,16 +7,16 @@
     "start": "node server.js",
     "dev": "npm-run-all --parallel watch server",
     "live": "npm-run-all --parallel server:live watch",
-    "server": "http-server -p 8080 ./dist",
-    "server:live": "live-server ./dist --no-browser --browser=google-chrome ",
+    "server": "http-server -p 8080 ./docs",
+    "server:live": "live-server ./docs --no-browser --browser=google-chrome ",
     "watch": "concurrently --names html,js,scss --prefix-colors blue,yellow,magenta \"npm run watch:html\" \"npm run watch:js\" \"npm run watch:scss\"",
     "watch:html": "watch \"npm run build:html\" html",
-    "watch:js": "watchify js/main.js -o dist/index.js -d",
-    "watch:scss": "node-sass --watch --source-map true --source-map-contents ./css/main.scss ./dist/index.css",
+    "watch:js": "watchify js/main.js -o docs/index.js -d",
+    "watch:scss": "node-sass --watch --source-map true --source-map-contents ./css/main.scss ./docs/index.css",
     "build": "npm-run-all build:*",
-    "build:html": "html-partials-compiler ./html/index.html > ./dist/index.html",
-    "build:js": "browserify -t uglifyify js/main.js | uglifyjs -c > dist/index.js",
-    "build:scss": "node-sass --output-style compressed css/main.scss > dist/index.css "
+    "build:html": "html-partials-compiler ./html/index.html > ./docs/index.html",
+    "build:js": "browserify -t uglifyify js/main.js | uglifyjs -c > docs/index.js",
+    "build:scss": "node-sass --output-style compressed css/main.scss > docs/index.css "
   },
   "license": "MIT",
   "dependencies": {
