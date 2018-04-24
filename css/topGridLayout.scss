@@ -1,0 +1,21 @@
+@media (min-width:600px){
+    .topGrid{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:    "intro howTo"
+                                "predefined predefined";
+        @media (min-width:1200px){
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: "intro howTo predefined";
+        }
+    }
+    #intro{
+        grid-area: intro;
+    }
+    #howTo{
+        grid-area: howTo;
+    }
+    #predefined{
+        grid-area: predefined;
+    }
+}

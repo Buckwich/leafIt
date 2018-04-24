@@ -7,20 +7,22 @@
 		"../css/shared.scss",
 		"../css/index.scss",
 		"../css/navbar.scss",
+		"../css/topGridLayout.scss",
 		"../css/intro.scss",
 		"../css/howTo.scss",
 		"../css/predefined.scss"
 	],
 	"sourcesContent": [
-		"@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto');\n@import \"variables.scss\";\n@import \"shared.scss\";\n\n@import \"index.scss\";\n@import \"navbar.scss\";\n@import \"intro.scss\";\n@import \"howTo.scss\";\n@import \"predefined.scss\"; ",
+		"@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto');\n@import \"variables.scss\";\n@import \"shared.scss\";\n\n@import \"index.scss\";\n\n@import \"navbar.scss\";\n\n@import \"topGridLayout.scss\";\n\n@import \"intro.scss\";\n@import \"howTo.scss\";\n@import \"predefined.scss\"; ",
 		"$orange:#D1C037;\n$yellow: #98DB31;\n$green: #00C41A;\n$cyan: #35DBB4;\n$blue: #0086D1;",
 		".roboto{\n    font-family: 'Roboto', sans-serif;\n}\n.oswald{\n    font-family: 'Oswald', sans-serif;\n} \nh1,h2,h3,h4{\n    font-family: 'Oswald', sans-serif;\n    margin:0;\n}\np{\n    margin:0;\n}\nsection{\n    padding:10px;\n}\n",
-		"body{\n    background-color: $orange; \n    padding:0;\n    margin:0;\n    font-family: 'Roboto', sans-serif;\n} ",
+		"body{\n    background-color: $orange; \n    padding:0;\n    margin:0;\n    font-family: 'Roboto', sans-serif;\n}",
 		"nav{\n    background-color: $blue;\n    padding:10px;\n}",
+		"@media (min-width:600px){\n    .topGrid{\n        display:grid;\n        grid-template-columns: 1fr 1fr;\n        grid-template-areas:    \"intro howTo\"\n                                \"predefined predefined\";\n        @media (min-width:1200px){\n            grid-template-columns: 1fr 1fr 1fr;\n            grid-template-areas: \"intro howTo predefined\";\n        }\n    }\n    #intro{\n        grid-area: intro;\n    }\n    #howTo{\n        grid-area: howTo;\n    }\n    #predefined{\n        grid-area: predefined;\n    }\n}",
 		"#intro{\n    background-color: $cyan;\n}",
 		"#howTo{\n    background-color:$green;\n    \n}",
 		"#predefined{\n    background-color: $yellow;\n} "
 	],
 	"names": [],
-	"mappings": "AAAA,OAAO,CAAC,4DAAI;AEAZ,AAAA,OAAO,CAAA;EACH,WAAW,EAAE,oBAAoB,GACpC;;AACD,AAAA,OAAO,CAAA;EACH,WAAW,EAAE,oBAAoB,GACpC;;AACD,AAAA,EAAE,EAAC,EAAE,EAAC,EAAE,EAAC,EAAE,CAAA;EACP,WAAW,EAAE,oBAAoB;EACjC,MAAM,EAAC,CAAC,GACX;;AACD,AAAA,CAAC,CAAA;EACG,MAAM,EAAC,CAAC,GACX;;AACD,AAAA,OAAO,CAAA;EACH,OAAO,EAAC,IAAI,GACf;;ACfD,AAAA,IAAI,CAAA;EACA,gBAAgB,EFDZ,OAAO;EEEX,OAAO,EAAC,CAAC;EACT,MAAM,EAAC,CAAC;EACR,WAAW,EAAE,oBAAoB,GACpC;;ACLD,AAAA,GAAG,CAAA;EACC,gBAAgB,EHGb,OAAO;EGFV,OAAO,EAAC,IAAI,GACf;;ACHD,AAAA,MAAM,CAAA;EACF,gBAAgB,EJEb,OAAO,GIDb;;ACFD,AAAA,MAAM,CAAA;EACF,gBAAgB,ELCZ,OAAO,GKCd;;ACHD,AAAA,WAAW,CAAA;EACP,gBAAgB,ENAX,OAAO,GMCf"
+	"mappings": "AAAA,OAAO,CAAC,4DAAI;AEAZ,AAAA,OAAO,CAAA;EACH,WAAW,EAAE,oBAAoB,GACpC;;AACD,AAAA,OAAO,CAAA;EACH,WAAW,EAAE,oBAAoB,GACpC;;AACD,AAAA,EAAE,EAAC,EAAE,EAAC,EAAE,EAAC,EAAE,CAAA;EACP,WAAW,EAAE,oBAAoB;EACjC,MAAM,EAAC,CAAC,GACX;;AACD,AAAA,CAAC,CAAA;EACG,MAAM,EAAC,CAAC,GACX;;AACD,AAAA,OAAO,CAAA;EACH,OAAO,EAAC,IAAI,GACf;;ACfD,AAAA,IAAI,CAAA;EACA,gBAAgB,EFDZ,OAAO;EEEX,OAAO,EAAC,CAAC;EACT,MAAM,EAAC,CAAC;EACR,WAAW,EAAE,oBAAoB,GACpC;;ACLD,AAAA,GAAG,CAAA;EACC,gBAAgB,EHGb,OAAO;EGFV,OAAO,EAAC,IAAI,GACf;;ACHD,MAAM,EAAE,SAAS,EAAE,KAAK;EACpB,AAAA,QAAQ,CAAA;IACJ,OAAO,EAAC,IAAI;IACZ,qBAAqB,EAAE,OAAO;IAC9B,mBAAmB,EAAK,qCACuB,GAKlD;EAJG,MAAM,EANN,SAAS,EAAE,KAAK,OAMR,SAAS,EAAE,MAAM;IAL7B,AAAA,QAAQ,CAAA;MAMA,qBAAqB,EAAE,WAAW;MAClC,mBAAmB,EAAE,wBAAwB,GAEpD;;AAVL,MAAM,EAAE,SAAS,EAAE,KAAK;EAWpB,AAAA,MAAM,CAAA;IACF,SAAS,EAAE,KAAK,GACnB;EACD,AAAA,MAAM,CAAA;IACF,SAAS,EAAE,KAAK,GACnB;EACD,AAAA,WAAW,CAAA;IACP,SAAS,EAAE,UAAU,GACxB;;ACnBL,AAAA,MAAM,CAAA;EACF,gBAAgB,ELEb,OAAO,GKDb;;ACFD,AAAA,MAAM,CAAA;EACF,gBAAgB,ENCZ,OAAO,GMCd;;ACHD,AAAA,WAAW,CAAA;EACP,gBAAgB,EPAX,OAAO,GOCf"
 }
