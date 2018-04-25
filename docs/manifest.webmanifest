@@ -3,6 +3,14 @@
     "short_name": "leafIT",
     "start_url": ".",
     "display": "standalone",
-    "background_color" : "#fff" ,
-    "description": "Allows generation of leafs for different microcontrollers"    
+    "background_color" : "#0086D1" ,
+    "description": "Allows generation of leafs for different microcontrollers",
+    "theme_color":"#0086D1",   
+    "icons": [  
+        {  
+          "src": "img/icon.png",  
+          "sizes": "512x512",  
+          "type": "image/png"  
+        }
+    ]
 }
