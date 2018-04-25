@@ -1,0 +1,8 @@
+{
+    "name": "leafIT",
+    "short_name": "leafIT",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color" : "#fff" ,
+    "description": "Allows generation of leafs for different microcontrollers"    
+}

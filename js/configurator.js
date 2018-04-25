@@ -1,7 +1,8 @@
-var jspdf = require("jspdf");
-var pdfjsLib = require('pdfjs-dist');
-console.log(pdfjsLib);
-pdfjsLib.GlobalWorkerOptions.workerSrc = 'pdf.worker.min.js';
+// var jspdf = require("jspdf");
+// var pdfjsLib = require('pdfjs-dist');
+// console.log(pdfjsLib);
+var pdfjsLib = window['pdfjsLib'];
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'libs/pdf.worker.min.js';
 
 
 var pdfDoc = null,
