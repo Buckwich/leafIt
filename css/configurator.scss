@@ -1,0 +1,24 @@
+#configurator{
+    background-color: $orange;
+}
+#preview{
+    max-width:30%;
+    margin:auto;
+    display:block;
+    background-color:white;
+    grid-area: preview;
+    
+}
+.configuratorGrid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:    "configurator preview";
+                            
+}
+#configurator{
+    grid-area: configurator;
+}
+
+#preview{
+    grid-area: preview;
+}
