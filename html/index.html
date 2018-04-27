@@ -18,14 +18,16 @@
   <link rel="manifest" href="manifest.webmanifest">
 
   <noscript>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
   </noscript>
 
   <link rel="shortcut icon" href="img/favicon.ico" />
 
   <link rel="preload" as="style" href="index.css">
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Oswald|Roboto">
+  <link rel="preload" as="font" href="https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752Fz8Gl-1PK62t.woff2">
+  
 
   <link rel="preload" href="index.js" as="script"></link>
 
@@ -97,6 +99,23 @@
   <!partial src="./configurator.html">
   <!partial src="./templates.html">
 
+  <script>
+    /* First CSS File */
+    var giftofspeed = document.createElement('link');
+    giftofspeed.rel = 'stylesheet';
+    giftofspeed.href = 'index.css';
+    giftofspeed.type = 'text/css';
+    var godefer = document.getElementsByTagName('link')[0];
+    godefer.parentNode.insertBefore(giftofspeed, godefer);
+
+    /* Second CSS File */
+    var giftofspeed2 = document.createElement('link');
+    giftofspeed2.rel = 'stylesheet';
+    giftofspeed2.href = 'https://fonts.googleapis.com/css?family=Oswald|Roboto';
+    giftofspeed2.type = 'text/css';
+    var godefer2 = document.getElementsByTagName('link')[0];
+    godefer2.parentNode.insertBefore(giftofspeed2, godefer2);
+  </script>
   <script src="libs/jspdf.min.js"></script>
   <script src="libs/pdf.min.js"></script>
 
