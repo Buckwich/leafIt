@@ -18,18 +18,24 @@
   <link rel="manifest" href="manifest.webmanifest">
 
   <noscript>
-  <link rel="stylesheet" href="index.css">
-  <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet"> -->
   </noscript>
 
   <link rel="shortcut icon" href="img/favicon.ico" />
 
   <link rel="preload" as="style" href="index.css">
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Oswald|Roboto">
-  <link rel="preload" as="font" href="https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752Fz8Gl-1PK62t.woff2">
-  
 
-  <link rel="preload" href="index.js" as="script"></link>
+  <link rel="preload" as="script" href="index.js">
+  <link rel="preload" as="script" href="libs/pdf.min.js">
+  <link rel="preload" as="script" href="libs/jspdf.min.js">
+  <!-- <link rel="preload" as="script" href="libs/pdf.worker.min.js"> -->
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto"> -->
+
+
+
+
 
   <style>
     body {
@@ -60,18 +66,18 @@
     }
 
     .roboto {
-      font-family: 'Roboto', sans-serif;
+      /* font-family: 'Roboto', sans-serif; */
     }
 
     .oswald {
-      font-family: 'Oswald', sans-serif;
+      /* font-family: 'Oswald', sans-serif; */
     }
 
     h1,
     h2,
     h3,
     h4 {
-      font-family: 'Oswald', sans-serif;
+      /* font-family: 'Oswald', sans-serif; */
       margin: 0;
     }
 
@@ -109,17 +115,39 @@
     godefer.parentNode.insertBefore(giftofspeed, godefer);
 
     /* Second CSS File */
-    var giftofspeed2 = document.createElement('link');
-    giftofspeed2.rel = 'stylesheet';
-    giftofspeed2.href = 'https://fonts.googleapis.com/css?family=Oswald|Roboto';
-    giftofspeed2.type = 'text/css';
-    var godefer2 = document.getElementsByTagName('link')[0];
-    godefer2.parentNode.insertBefore(giftofspeed2, godefer2);
+    // var giftofspeed2 = document.createElement('link');
+    // giftofspeed2.rel = 'stylesheet';
+    // giftofspeed2.href = 'https://fonts.googleapis.com/css?family=Oswald|Roboto';
+    // giftofspeed2.type = 'text/css';
+    // var godefer2 = document.getElementsByTagName('link')[0];
+    // godefer2.parentNode.insertBefore(giftofspeed2, godefer2);
   </script>
-  <script src="libs/jspdf.min.js"></script>
+  <script type="text/javascript">
+    function downloadJSAtOnload() {
+      var jspdf = document.createElement("script");
+      jspdf.src = "libs/jspdf.min.js";
+      document.body.appendChild(jspdf);
+      jspdf.addEventListener('load', function () {
+        var pdfjs = document.createElement("script");
+        pdfjs.src = "libs/pdf.min.js";
+        document.body.appendChild(pdfjs);
+        pdfjs.addEventListener('load', function () {
+          var indexjs = document.createElement("script");
+          indexjs.src = "index.js";
+          document.body.appendChild(indexjs);          
+        });
+      });
+    }
+    if (window.addEventListener)
+      window.addEventListener("load", downloadJSAtOnload, false);
+    else if (window.attachEvent)
+      window.attachEvent("onload", downloadJSAtOnload);
+    else window.onload = downloadJSAtOnload;
+  </script>
+  <!-- <script src="libs/jspdf.min.js"></script>
   <script src="libs/pdf.min.js"></script>
 
-  <script src="index.js"></script>
+  <script src="index.js"></script> -->
 
 
 </body>
