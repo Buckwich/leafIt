@@ -28,6 +28,59 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Oswald|Roboto">
 
   <link rel="preload" href="index.js" as="script"></link>
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    #intro {
+      background-color: #35DBB4;
+    }
+
+    #howTo {
+      background-color: #00C41A;
+    }
+
+    #predefined {
+      background-color: #98DB31;
+    }
+
+    #configurator {
+      background-color: #D1C037;
+    }
+
+    nav {
+      background-color: #0086D1;
+      padding: 10px;
+    }
+
+    .roboto {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .oswald {
+      font-family: 'Oswald', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Oswald', sans-serif;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    section {
+      padding: 10px;
+    }
+  </style>
 </head>
 
 <body>
@@ -35,11 +88,12 @@
             <h1 style="color:red">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</h1>
   <![endif]-->
   <!partial src="./navbar.html">
-  <div class="topGrid">  
+  <div class="topGrid">
     <!partial src="./intro.html">
     <!partial src="./howTo.html">
     <!partial src="./predefined.html">
-  </div>  <!-- .topGrid -->
+  </div>
+  <!-- .topGrid -->
   <!partial src="./configurator.html">
   <!partial src="./templates.html">
 
