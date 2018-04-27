@@ -24,6 +24,7 @@
 
   <link rel="shortcut icon" href="img/favicon.ico" />
 
+
   <link rel="preload" as="style" href="index.css">
 
   <link rel="preload" as="script" href="index.js">
@@ -107,12 +108,12 @@
 
   <script>
     /* First CSS File */
-    var giftofspeed = document.createElement('link');
-    giftofspeed.rel = 'stylesheet';
-    giftofspeed.href = 'index.css';
-    giftofspeed.type = 'text/css';
-    var godefer = document.getElementsByTagName('link')[0];
-    godefer.parentNode.insertBefore(giftofspeed, godefer);
+    // var giftofspeed = document.createElement('link');
+    // giftofspeed.rel = 'stylesheet';
+    // giftofspeed.href = 'index.css';
+    // giftofspeed.type = 'text/css';
+    // var godefer = document.getElementsByTagName('link')[0];
+    // godefer.parentNode.insertBefore(giftofspeed, godefer);
 
     /* Second CSS File */
     // var giftofspeed2 = document.createElement('link');
@@ -124,6 +125,12 @@
   </script>
   <script type="text/javascript">
     function downloadJSAtOnload() {
+      var giftofspeed = document.createElement('link');
+      giftofspeed.rel = 'stylesheet';
+      giftofspeed.href = 'index.css';
+      giftofspeed.type = 'text/css';
+      var godefer = document.getElementsByTagName('link')[0];
+      godefer.parentNode.insertBefore(giftofspeed, godefer);
       var jspdf = document.createElement("script");
       jspdf.src = "libs/jspdf.min.js";
       document.body.appendChild(jspdf);
@@ -134,7 +141,7 @@
         pdfjs.addEventListener('load', function () {
           var indexjs = document.createElement("script");
           indexjs.src = "index.js";
-          document.body.appendChild(indexjs);          
+          document.body.appendChild(indexjs);
         });
       });
     }
