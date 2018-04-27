@@ -14,16 +14,17 @@
     "watch:js": "watchify js/main.js -o docs/index.js -d",
     "watch:scss": "node-sass --watch --source-map true --source-map-contents ./css/main.scss ./docs/index.css",
     "build": "npm-run-all build:*",
-    "build:html": "html-partials-compiler ./html/index.html > ./docs/index.html",
+    "build:html": "html-partials-compiler ./html/index.html > ./docs/index.html && npm run minify:html",
     "build:js": "browserify -t uglifyify js/main.js | uglifyjs -c > docs/index.js",
-    "build:scss": "node-sass --output-style compressed css/main.scss > docs/index.css "
+    "build:scss": "node-sass --output-style compressed css/main.scss > docs/index.css ",
+    "minify:html":"html-minifier docs/index.html -o docs/index.html --case-sensitive --collapse-boolean-attributes --collapse-inline-tag-whitespace --collapse-whitespace --conservative-collapse --decode-entities --keep-closing-slash --minify-css true --minify-js true --prevent-attributes-escaping --process-conditional-comments --remove-attribute-quotes --remove-comments --remove-empty-attributes --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --remove-tag-whitespace --use-short-doctype"
   },
   "license": "MIT",
   "dependencies": {
     "browserify": "^15.2.0",
     "concurrently": "^3.5.1",
     "express": "^4.16.3",
-    "html-minifier": "^3.5.8",
+    "html-minifier": "^3.5.15",
     "html-partials-compiler": "^1.0.7",
     "http-server": "^0.10.0",
     "jspdf": "^1.3.5",
