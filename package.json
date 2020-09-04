@@ -31,7 +31,7 @@
     "live-server": "^1.2.0",
     "morgan": "^1.9.0",
     "mustache": "^2.3.0",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.2",
     "pdfjs-dist": "^2.0.489",
     "sass-watch": "^0.1.0",
